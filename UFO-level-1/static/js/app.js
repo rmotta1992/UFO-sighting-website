@@ -8,10 +8,6 @@ var tbody = d3.select("tbody");
 // Console.log the data to check it pulls correctly 
 console.log(tableData);
 
-// // Step 1: Loop Through `data` and console.log each weather report object
-// data.forEach(function(ufoSighting) {
-//    console.log(ufoSighting);
-// });
 
 // update cell text with data from file 
 tableData.forEach(function(ufoSighting) {
@@ -24,12 +20,11 @@ tableData.forEach(function(ufoSighting) {
   });
 });
 
+  // selecting button and form
   var button = d3.select("#filter-btn");
-
-  // Select the form
   var form = d3.select("#form");
   
-  // Create event handlers for clicking the button or pressing the enter key
+  // event handlers for clicking the button or pressing enter 
   button.on("click", runEnter);
   form.on("submit",runEnter);
   
@@ -39,7 +34,7 @@ tableData.forEach(function(ufoSighting) {
     // Prevent the page from refreshing
     d3.event.preventDefault();
   
-    // Select the input element and get the raw HTML node
+    // Select the input element
     var inputElement = d3.select("#datetime");
   
     // Get the value property of the input element
@@ -55,15 +50,17 @@ tableData.forEach(function(ufoSighting) {
     }
     var userDate = tableData.filter(selectDate);
   
-    // Test
+    // testing search variable
     console.log(userDate);
    
     // if tableData.datetime === inputValue:  
     //     newTalbe.append(userDate)
     var tbody2 = d3.select("tbody")
-
+    
+    // clear old table data
     tbody.html("");
 
+    // fill the table with new data based on entered dates
     userDate.forEach(function(selectDate) {
         //console.log(ufoSighting);
         var row = tbody.append("tr");
