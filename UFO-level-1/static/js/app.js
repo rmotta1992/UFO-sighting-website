@@ -62,10 +62,8 @@ tableData.forEach(function(ufoSighting) {
 
     // fill the table with new data based on entered dates
     userDate.forEach(function(selectDate) {
-        //console.log(ufoSighting);
         var row = tbody.append("tr");
         Object.entries(selectDate).forEach(function([key, value]) {
-          //console.log(key, value);
           var cell = row.append("td");
           cell.text(value);
         });
