@@ -1,14 +1,9 @@
-# javascript-challenge
+# UFO Sighting Website
 
-repo for java script homework
 
-JS code written using VS Code
+## Scope
+The goal of this project was to create a searchable database for UFO sightings. Using JavaScript a table was imbeded into the site that allows end users to type in a date they want and see all UFO reportings from that day. 
 
-Made some updates to the starter HTML file in order for it to work as neeeded
+[demo](images/ufo-dashboard-demo)
 
-homework was the challenging yet not to overwhelming 
-
-final submission allows user to start by seeing all of the dates in the data
-
-the user can then search by certain dates and see the table with only those dates 
 
